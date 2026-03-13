@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 /**
  * ModuleDemoComponent - Traditional NgModule-based component
- * 
+ *
  * This component demonstrates the traditional Angular architecture using NgModule.
  * Unlike standalone components, this component must be declared in an NgModule.
- * 
+ *
  * Key differences from standalone components:
  * - No 'standalone: true' flag
  * - No 'imports' array in the component decorator
@@ -13,22 +13,22 @@ import { Component } from '@angular/core';
  * - Dependencies are imported at the module level, not component level
  */
 @Component({
-  selector: 'app-module-demo',
+  selector: "app-module-demo",
   template: `
     <div class="demo-container">
       <h2>Module-Based Component Demo</h2>
-      
+
       <section class="info-section">
         <h3>What is NgModule?</h3>
         <p>
-          NgModule is the traditional way to organize Angular applications.
-          It groups related components, directives, pipes, and services together.
+          NgModule is the traditional way to organize Angular applications. It
+          groups related components, directives, pipes, and services together.
         </p>
       </section>
 
       <section class="comparison-section">
         <h3>NgModule vs Standalone Components</h3>
-        
+
         <div class="comparison-grid">
           <div class="comparison-item">
             <h4>NgModule Approach (This Component)</h4>
@@ -40,7 +40,7 @@ import { Component } from '@angular/core';
               <li>Good for large, complex applications</li>
             </ul>
           </div>
-          
+
           <div class="comparison-item">
             <h4>Standalone Approach (Other Demos)</h4>
             <ul>
@@ -56,11 +56,23 @@ import { Component } from '@angular/core';
 
       <section class="code-section">
         <h3>Module Structure</h3>
-        <p>This component is part of <strong>ModuleDemoModule</strong> which includes:</p>
+        <p>
+          This component is part of <strong>ModuleDemoModule</strong> which
+          includes:
+        </p>
         <ul>
-          <li><strong>declarations:</strong> [ModuleDemoComponent] - Components belonging to this module</li>
-          <li><strong>imports:</strong> [CommonModule] - Other modules this module depends on</li>
-          <li><strong>exports:</strong> [ModuleDemoComponent] - Components available to other modules</li>
+          <li>
+            <strong>declarations:</strong> [ModuleDemoComponent] - Components
+            belonging to this module
+          </li>
+          <li>
+            <strong>imports:</strong> [CommonModule] - Other modules this module
+            depends on
+          </li>
+          <li>
+            <strong>exports:</strong> [ModuleDemoComponent] - Components
+            available to other modules
+          </li>
         </ul>
       </section>
 
@@ -78,89 +90,85 @@ import { Component } from '@angular/core';
         <h3>💡 Note</h3>
         <p>
           Angular 18 recommends standalone components as the default approach.
-          However, NgModule is still fully supported and useful in certain scenarios.
-          You can even mix both approaches in the same application!
+          However, NgModule is still fully supported and useful in certain
+          scenarios. You can even mix both approaches in the same application!
         </p>
       </section>
     </div>
   `,
-  styles: [`
-    .demo-container {
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      color: #dd0031;
-      border-bottom: 2px solid #dd0031;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-
-    h3 {
-      color: #333;
-      margin-top: 25px;
-      margin-bottom: 15px;
-    }
-
-    h4 {
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    section {
-      margin-bottom: 30px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      border-left: 4px solid #dd0031;
-    }
-
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 15px;
-    }
-
-    .comparison-item {
-      background-color: white;
-      padding: 15px;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    ul {
-      margin: 10px 0;
-      padding-left: 25px;
-    }
-
-    li {
-      margin: 8px 0;
-      line-height: 1.6;
-    }
-
-    .note-section {
-      background-color: #fff3cd;
-      border-left-color: #ffc107;
-    }
-
-    .note-section p {
-      margin: 0;
-      color: #856404;
-    }
-
-    strong {
-      color: #dd0031;
-    }
-
-    @media (max-width: 768px) {
-      .comparison-grid {
-        grid-template-columns: 1fr;
+  styles: [
+    `
+      h2 {
+        color: #dd0031;
+        border-bottom: 2px solid #dd0031;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
       }
-    }
-  `]
+
+      h3 {
+        color: #333;
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+
+      h4 {
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        border-left: 4px solid #dd0031;
+      }
+
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      .comparison-item {
+        background-color: white;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        margin: 10px 0;
+        padding-left: 25px;
+      }
+
+      li {
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+
+      .note-section {
+        background-color: #fff3cd;
+        border-left-color: #ffc107;
+      }
+
+      .note-section p {
+        margin: 0;
+        color: #856404;
+      }
+
+      strong {
+        color: #dd0031;
+      }
+
+      @media (max-width: 768px) {
+        .comparison-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    `,
+  ],
 })
 export class ModuleDemoComponent {
   // This is a traditional component without the standalone flag
